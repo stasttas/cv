@@ -28,3 +28,4 @@ int main() {
     return 0;
 }
 its me mario
+dashastar2006krutaya
