@@ -1,7 +1,7 @@
 # Stanislav Vysotsky
 ## Contact Information
  Email: tasat28121@gmail.com
- Phone: +375293571804
+ Phone: +375293571806
  GitHub: github.com/stasttas
  Telegram: @stasttas
 ## About Me
