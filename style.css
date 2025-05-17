@@ -1,0 +1,264 @@
+/* === Базовые стили === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Основные переменные === */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --text-color: #333;
+  --bg-color: #f9f9f9;
+  --border-color: #e0e0e0;
+  --font-main: 'Noto Sans', sans-serif;
+  --font-heading: 'Alfa Slab One', cursive;
+}
+
+/* === Body и структура страницы === */
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 400;
+}
+
+/* === Контейнер === */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === Header === */
+.header {
+  border-bottom: 1px solid var(--border-color);
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* === Main content === */
+.main {
+  flex-grow: 1;
+  padding: 40px 0;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section {
+  width: 50%;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.section-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.section-item::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+}
+
+.section-item a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.section-item a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Profile section special styles */
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid var(--primary-color);
+}
+
+.profile-name {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+/* === Footer === */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 14px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.social-link:hover {
+  color: var(--primary-color);
+}
+
+/* === Адаптивность === */
+@media (max-width: 992px) {
+  .section {
+    width: 100%;
+  }
+  
+  .nav-list {
+    gap: 15px;
+  }
+  
+  .profile-name {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    justify-content: center;
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .profile-name {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: 10px;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .profile-name {
+    font-size: 1.5rem;
+  }
+}
