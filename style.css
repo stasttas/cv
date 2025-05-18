@@ -164,7 +164,7 @@ body {
 .avatar {
   width: 16px;
   height: 16px;
-  border-radius: 50%;
+  border-radius: 20%;
   object-fit: cover;
   margin-bottom: 20px;
   border: 3px solid var(--primary-color);
