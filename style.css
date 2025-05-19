@@ -214,7 +214,7 @@ body {
 }
 
 /* === Адаптивность === */
-@media (max-width: 992px) {
+@media (max-width: 344px) {
   .section {
     width: 100%;
   }
@@ -228,7 +228,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 222px) {
   .nav {
     justify-content: center;
   }
